@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-storybook';
+
+  handleButtonClick() {
+    console.log("Button clicked on page");
+  }
+
+  handleClick() {
+    console.log("Button clicked on page");
+  }
 }
