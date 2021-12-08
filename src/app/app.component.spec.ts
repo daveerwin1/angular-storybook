@@ -1,6 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {LrngPageComponent} from "./components/lrng-page/lrng-page.component";
+import {LrngCardComponent} from "./components/lrng-card/lrng-card.component";
+import {LrngButtonComponent} from "./components/lrng-button/lrng-button.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +12,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, LrngPageComponent, LrngCardComponent
       ],
     }).compileComponents();
   });
@@ -30,6 +33,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-storybook app is running!');
+    expect(compiled.querySelector('.page-title').textContent).toContain('angular-storybook');
   });
 });
