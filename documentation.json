@@ -90,7 +90,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<h1>Angular/Storybook Test</h1>\n\n<app-lrng-page (onClick)=\"handleButtonClick()\"></app-lrng-page>\n\n<app-lrng-page (onClick)=\"handleButtonClick()\" [cardButtonDisabled]=\"true\"></app-lrng-page>\n\n\n<div>\n  <h2>This is lrng-page component</h2>\n\n  <div class=\"card\">\n    <img src=\"https://placeimg.com/100/100/nature\">\n    <h3>Card Title</h3>\n\n    <button type=\"button\" class=\"button\" (click)=\"handleClick()\">label</button>\n\n  </div>\n\n</div>\n\n<router-outlet></router-outlet>\n"
+            "templateData": "<h1 class=\"page-title\">{{title}}</h1>\n\n<app-lrng-page (onClick)=\"handleButtonClick()\"></app-lrng-page>\n\n<app-lrng-page (onClick)=\"handleButtonClick()\" [cardButtonDisabled]=\"true\"></app-lrng-page>\n\n\n<div>\n  <h2>This is lrng-page component</h2>\n\n  <div class=\"card\">\n    <img src=\"https://placeimg.com/100/100/nature\">\n    <h3>Card Title</h3>\n\n    <button type=\"button\" class=\"button\" (click)=\"handleClick()\">label</button>\n\n  </div>\n\n</div>\n\n<router-outlet></router-outlet>\n"
         },
         {
             "name": "ButtonComponent",
@@ -399,106 +399,6 @@
             "templateData": "<button type=\"button\" [ngClass]=\"classes\" (click)=\"handleClick()\" [disabled]=\"disabled\">{{label}}</button>\n"
         },
         {
-            "name": "LrngCard2Component",
-            "id": "component-LrngCard2Component-2030d5e8a41eee4b410a915253e5f8569a6f5545246ba23ed6c88bdbcd2020e11a974a83d95213a2274993fcfd1549c84bfcc94b2556586d03acd2af87db8bfe",
-            "file": "src/app/components/lrng-card2/lrng-card2.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-lrng-card2",
-            "styleUrls": [
-                "./lrng-card2.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./lrng-card2.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "buttonDisabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "classes",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "handleButtonClick",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 21,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 18,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';\n\n@Component({\n  selector: 'app-lrng-card2',\n  templateUrl: './lrng-card2.component.html',\n  styleUrls: ['./lrng-card2.component.scss']\n})\nexport class LrngCard2Component implements OnInit {\n\n  @Input() classes = '';\n\n  @Input() buttonDisabled = false;\n\n  @Output() onClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  handleButtonClick() {\n    console.log(\"button clicked in card\");\n    this.onClick.emit();\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".card {\n  display: inline-block;\n  padding: 20px;\n  border: 1px solid gray;\n  border-radius: 4px;\n}\n",
-                    "styleUrl": "./lrng-card2.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 14
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div [ngClass]=\"classes\">\n  <img src=\"https://placeimg.com/100/100/nature\">\n  <h3>Card Title</h3>\n  <app-lrng-button [classes]=\"'button button-primary'\"\n                   [label]=\"'Test Button'\"\n                   (onClick)=\"handleButtonClick()\"\n                   [disabled]=\"buttonDisabled\"></app-lrng-button>\n</div>\n"
-        },
-        {
             "name": "LrngCardComponent",
             "id": "component-LrngCardComponent-2d618394bab01e8bdec3b62edbf1b8291d1ff01fc036c815a94bbaf158acb1b59b734411f08f5031f1394eec2603333c24af7e45e1b801ed94f367296deeea7a",
             "file": "src/app/components/lrng-card/lrng-card.component.ts",
@@ -597,78 +497,6 @@
                 "OnInit"
             ],
             "templateData": "<div [ngClass]=\"classes\">\n  <img src=\"https://placeimg.com/100/100/nature\">\n  <h3>Card Title</h3>\n  <ng-content></ng-content>\n\n</div>\n"
-        },
-        {
-            "name": "LrngPage2Component",
-            "id": "component-LrngPage2Component-811d698197efd93ca75a957f863d4171fa14aefcbb438e80def7294ddcd374cb6d60a57c31ed097e2814fa831235466a5ea8bfc80fd01f9460ae9b2417fd30b4",
-            "file": "src/app/components/lrng-page2/lrng-page2.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-lrng-page2",
-            "styleUrls": [
-                "./lrng-page2.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./lrng-page2.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "handleButtonClick",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 15,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import {Component, Input, OnInit} from '@angular/core';\n\n@Component({\n  selector: 'app-lrng-page2',\n  templateUrl: './lrng-page2.component.html',\n  styleUrls: ['./lrng-page2.component.scss']\n})\nexport class LrngPage2Component implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  handleButtonClick() {\n    console.log(\"button clicked lrng-page\")\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./lrng-page2.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div>\n  <h2>This is lrng-page component</h2>\n  <app-lrng-card2 [classes]=\"'card'\"></app-lrng-card2>\n</div>\n"
         },
         {
             "name": "LrngPageComponent",
@@ -829,13 +657,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-337cebe39a68efd04d9ad26abdaec806bf1debee9d0fd0d9546c9296c4d6205d7446a9d28cea962ce6bb9c73022ef7b71a073ba1a6102d970df45967a3a2d321",
+            "id": "module-AppModule-9377d0cd4f5c54395df66d46b9bbcab4fc36e732669d3eab26fe3514a82b5968f62312964d7435d0d6cd7233fdfe7b5a0f730090877cd1abce59a6c77df5b681",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { LrngButtonComponent } from './components/lrng-button/lrng-button.component';\nimport { LrngCardComponent } from './components/lrng-card/lrng-card.component';\nimport { LrngPageComponent } from './components/lrng-page/lrng-page.component';\nimport { LrngCard2Component } from './components/lrng-card2/lrng-card2.component';\nimport { LrngPage2Component } from './components/lrng-page2/lrng-page2.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    LrngButtonComponent,\n    LrngCardComponent,\n    LrngPageComponent,\n    LrngCard2Component,\n    LrngPage2Component,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { LrngButtonComponent } from './components/lrng-button/lrng-button.component';\nimport { LrngCardComponent } from './components/lrng-card/lrng-card.component';\nimport { LrngPageComponent } from './components/lrng-page/lrng-page.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    LrngButtonComponent,\n    LrngCardComponent,\n    LrngPageComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -851,13 +679,7 @@
                             "name": "LrngButtonComponent"
                         },
                         {
-                            "name": "LrngCard2Component"
-                        },
-                        {
                             "name": "LrngCardComponent"
-                        },
-                        {
-                            "name": "LrngPage2Component"
                         },
                         {
                             "name": "LrngPageComponent"
@@ -943,31 +765,11 @@
                 "name": "ButtonDisabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "ButtonDisabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/lrng-page/lrng-page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "context",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/test.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
                 "name": "Disabled",
@@ -1060,16 +862,6 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "PageExample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/lrng-page2/lrng-page2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1098,25 +890,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "require",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/test.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "literal type"
             },
             {
                 "name": "Secondary",
@@ -1192,27 +965,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/lrng-page/lrng-page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/lrng-page2/lrng-page2.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1255,38 +1008,6 @@
                     "defaultValue": "(args) => ({\n  props: args,\n})"
                 }
             ],
-            "src/app/components/lrng-card2/lrng-card2.stories.ts": [
-                {
-                    "name": "ButtonDisabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n})"
-                }
-            ],
             "src/app/components/lrng-page/lrng-page.stories.ts": [
                 {
                     "name": "ButtonDisabled",
@@ -1317,27 +1038,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "(args) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/test.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "literal type"
                 }
             ],
             "src/app/components/lrng-button/lrng-button.stories.ts": [
@@ -1511,28 +1211,6 @@
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
-            ],
-            "src/app/components/lrng-page2/lrng-page2.stories.ts": [
-                {
-                    "name": "PageExample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/lrng-page2/lrng-page2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/lrng-page2/lrng-page2.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: args,\n})"
-                }
             ]
         },
         "groupedFunctions": {},
@@ -1645,45 +1323,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/components/lrng-card2/lrng-card2.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "LrngCard2Component",
-                "coveragePercent": 0,
-                "coverageCount": "0/7",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "ButtonDisabled",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/lrng-card2/lrng-card2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "src/app/components/lrng-page/lrng-page.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1714,35 +1353,6 @@
             },
             {
                 "filePath": "src/app/components/lrng-page/lrng-page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/lrng-page2/lrng-page2.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "LrngPage2Component",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/lrng-page2/lrng-page2.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "PageExample",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/lrng-page2/lrng-page2.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1915,26 +1525,6 @@
                 "name": "PageComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/test.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "context",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/test.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "require",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
                 "status": "low"
             }
         ]

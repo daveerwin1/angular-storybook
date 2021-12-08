@@ -1,21 +1,5 @@
-<h1 class="page-title">angular-storybook</h1>
+<h1 class="page-title">{{title}}</h1>
 
-<app-lrng-page (onClick)="handleButtonClick()"></app-lrng-page>
-
-<app-lrng-page (onClick)="handleButtonClick()" [cardButtonDisabled]="true"></app-lrng-page>
-
-
-<div>
-  <h2>This is lrng-page component</h2>
-
-  <div class="card">
-    <img src="https://placeimg.com/100/100/nature">
-    <h3>Card Title</h3>
-
-    <button type="button" class="button" (click)="handleClick()">label</button>
-
-  </div>
-
-</div>
+<app-lrng-card></app-lrng-card>
 
 <router-outlet></router-outlet>

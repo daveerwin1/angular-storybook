@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import {LrngPageComponent} from "./components/lrng-page/lrng-page.component";
 import {LrngCardComponent} from "./components/lrng-card/lrng-card.component";
 import {LrngButtonComponent} from "./components/lrng-button/lrng-button.component";
 
@@ -12,7 +11,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent, LrngPageComponent, LrngCardComponent
+        AppComponent, LrngCardComponent
       ],
     }).compileComponents();
   });
