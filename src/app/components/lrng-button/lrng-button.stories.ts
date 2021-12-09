@@ -15,14 +15,20 @@ const Template: Story = (args) => ({
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Button',
-  classes: 'button button-primary'
+  submodules: 'button-primary'
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Button',
-  classes: 'button button-primary',
+  submodules: 'button-primary',
   disabled: true,
 };
 
+export const WithAriaLabel = Template.bind({});
+WithAriaLabel.args = {
+  label: 'Button',
+  submodules: 'button-primary',
+  arialabel: 'This is a groovy button, click it',
+}
 

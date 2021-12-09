@@ -9,7 +9,9 @@ export class LrngButtonComponent implements OnInit {
 
   @Input() label = 'Button';
 
-  @Input() classes = '';
+  @Input() arialabel = '';
+
+  @Input() submodules = '';
 
   @Input() disabled = false;
 

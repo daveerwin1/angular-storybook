@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LrngCardComponent } from './lrng-card.component';
+import {LrngButtonComponent} from "../lrng-button/lrng-button.component";
 
 describe('LrngCardComponent', () => {
   let component: LrngCardComponent;
@@ -8,7 +9,7 @@ describe('LrngCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LrngCardComponent ]
+      declarations: [ LrngCardComponent, LrngButtonComponent ]
     })
     .compileComponents();
   });

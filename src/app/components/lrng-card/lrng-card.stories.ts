@@ -22,11 +22,15 @@ const Template: Story = (args) => ({
 
 export const Primary= Template.bind({});
 Primary.args = {
-  classes: 'card',
+
 };
 
 export const ButtonDisabled= Template.bind({});
 ButtonDisabled.args = {
-  classes: 'card',
   buttonDisabled: true,
+};
+
+export const Dark= Template.bind({});
+Dark.args = {
+  submodules: 'card-dark',
 };

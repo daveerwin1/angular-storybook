@@ -1,1 +1,6 @@
-<button type="button" [ngClass]="classes" (click)="handleClick()" [disabled]="disabled">{{label}}</button>
+<button type="button"
+        class="button"
+        [ngClass]="submodules"
+        (click)="handleClick()"
+        [disabled]="disabled"
+        [attr.aria-label]="arialabel ? arialabel : null">{{label}}</button>

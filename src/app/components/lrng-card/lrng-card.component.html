@@ -1,6 +1,8 @@
-<div [ngClass]="classes">
+<div class="card" [ngClass]="submodules">
   <img src="https://placeimg.com/100/100/nature">
   <h3>Card Title</h3>
-  <ng-content></ng-content>
+  <app-lrng-button [disabled]="buttonDisabled"
+                   (onClick)="handleButtonClick()"
+                   [submodules]="'button-primary'"></app-lrng-button>
 
 </div>

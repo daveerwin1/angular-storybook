@@ -1,6 +1,6 @@
 .button {
   appearance: none;
-  background: #66bf3c;
+  cursor: pointer;
   padding: 8px;
   color: white;
   border: 1px solid white;
@@ -8,5 +8,10 @@
 
   &[disabled] {
     background: gray;
+    cursor: not-allowed;
   }
+}
+
+.button-primary {
+  background: #66bf3c;
 }

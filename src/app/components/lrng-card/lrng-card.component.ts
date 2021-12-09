@@ -7,7 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class LrngCardComponent implements OnInit {
 
-  @Input() classes = '';
+  @Input() submodules = '';
 
   @Input() buttonDisabled = false;
 

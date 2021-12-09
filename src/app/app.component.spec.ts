@@ -11,7 +11,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent, LrngCardComponent
+        AppComponent, LrngCardComponent, LrngButtonComponent
       ],
     }).compileComponents();
   });
