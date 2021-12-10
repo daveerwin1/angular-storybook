@@ -24,5 +24,6 @@ export class LrngButtonComponent implements OnInit {
 
   handleClick() {
     this.onClick.emit();
+    this.label = 'clicked!'
   }
 }

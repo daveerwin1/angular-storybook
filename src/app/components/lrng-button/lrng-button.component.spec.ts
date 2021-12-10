@@ -22,4 +22,9 @@ describe('LrngButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('button click', () => {
+    component.handleClick();
+    expect(component.label).toEqual('clicked!');
+  });
 });
